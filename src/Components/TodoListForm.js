@@ -20,7 +20,7 @@ export default class TodoListForm extends Component {
 
     handleSubmit(evt){
         evt.preventDefault()
-        const newTodo = {...this.state , id : uuidv4()}
+        const newTodo = {...this.state , id : uuidv4() , done : false}
         this.props.create(newTodo)
         this.setState({
             plan :''
